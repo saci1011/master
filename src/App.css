@@ -6,6 +6,21 @@
   text-align: center;
 }
 
+.list-group-item{
+  list-style: none;
+}
+
+.pagination{
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 5px;
+  background-color: dimgrey;
+  color: white;
+  list-style: none;
+}
+
 nav{
   display: flex;
   justify-content: space-around;
@@ -20,6 +35,7 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
+  list-style: none;
 }
 
 .a{

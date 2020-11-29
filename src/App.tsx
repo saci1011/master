@@ -3,6 +3,7 @@ import './App.css';
 import  Nav from './Nav';
 import About from './About';
 import Home from './Home';
+import IdDetail from './IdDetail';
 // var Switch = require("react-router-dom").Switch;
 // var Router = require("react-router-dom").Router;
 // var Route = require("react-router-dom").Route;
@@ -21,6 +22,7 @@ function App() {
           <Switch>
             <Route path="/home" exact component={Home} />
             <Route path="/about"  component={About} />
+            <Route path="/about/id"  component={About} />
           </Switch>
      </div>
    </Router>

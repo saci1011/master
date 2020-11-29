@@ -23,31 +23,13 @@ const App = () => {
       fetchPosts();
     }, []);
   
-    // Get current posts
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
-  
-    // Change page
-    const paginate = (pageNumber: React.SetStateAction<number>) => setCurrentPage(pageNumber);
+
   
     return (
       <div className='container mt-5'>
-          
-        <h1 className='text-primary mb-3'>JsonPlaceHolder</h1>
-
-         
-        <Link to={`/Home/`}>
-        <Posts posts={currentPosts} loading={loading} />
-        </Link>
-
-        <Link to={`/Home/`}>
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={posts.length}
-          paginate={paginate}
-        />
-        </Link>
+         <h1>
+             Item
+         </h1>
       </div>
     );
   };
