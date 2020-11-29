@@ -8,5 +8,33 @@
 }
 
 
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: dimgrey;
+  color: white;
+}
 
+.nav-links{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
+.a{
+
+  color: white;
+  text-align: center;
+
+}
+
+.p{
+  background-color: darkgreen;
+  border: darkgreen;
+  border-style: solid;
+  border-width: 4px;
+  font-size: 18px;
+}

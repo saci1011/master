@@ -1,47 +1,35 @@
-import React, {useState, useEffect} from 'react';
+import React  from 'react';
 import './App.css';
-import axios from 'axios'; 
-import Posts from './components/Posts';
-import Pagination from './components/Pagination';
+import  Nav from './Nav';
+import About from './About';
+import Home from './Home';
+// var Switch = require("react-router-dom").Switch;
+// var Router = require("react-router-dom").Router;
+// var Route = require("react-router-dom").Route;
+// var Link = require("react-router-dom").LInk;
+
+import {HashRouter as Router, Switch, Route, Link} from 'react-router-dom';
+import { Component } from 'react';
+
+function App() {
+
+  
+  return (
+    <Router>  
+      
+      <div className="App">
+      <Nav/>
+      <Switch>
+      <Route path="/home" exact component={Home} />
+      <Route path="/about"  component={About} />
+      </Switch>
+    </div>
+   </Router>
+  );
+}
 
 
-const App = () => {
-    const [posts, setPosts] = useState([]);
-    const [loading, setLoading] = useState(false);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage] = useState(10);
-  
-    useEffect(() => {
-      const fetchPosts = async () => {
-        setLoading(true);
-        const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
-        setPosts(res.data);
-        setLoading(false);
-      };
-  
-      fetchPosts();
-    }, []);
-  
-    // Get current posts
-    const indexOfLastPost = currentPage * postsPerPage;
-    const indexOfFirstPost = indexOfLastPost - postsPerPage;
-    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
-  
-    // Change page
-    const paginate = (pageNumber: React.SetStateAction<number>) => setCurrentPage(pageNumber);
-  
-    return (
-      <div className='container mt-5'>
-        <h1 className='text-primary mb-3'>My Blog</h1>
-        <Posts posts={currentPosts} loading={loading} />
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={posts.length}
-          paginate={paginate}
-        />
-      </div>
-    );
-  };
-  
-  export default App;
-  
+
+
+
+export default App;

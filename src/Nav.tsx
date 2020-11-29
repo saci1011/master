@@ -1,17 +1,25 @@
 import React from 'react';
 import './App.css';
 import {Link} from 'react-router-dom'
-import Rout from '/.Rout';
+
+
+
 
 function Nav() {
+
+    const navStyle ={
+        color: 'white'
+    };
+
+
   return (
     <nav>
         <h3>Logo</h3>
         <ul className="nav-links">
-            <Link to='/Home' replace >
+            <Link style={navStyle} to='/Home' replace >
             <li>Home</li>
             </Link>
-            <Link to='/About' >
+            <Link style={navStyle} to='/About' >
             <li>About</li>
             </Link>
             
