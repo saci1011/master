@@ -16,20 +16,15 @@ function App() {
   
   return (
     <Router>  
-      
       <div className="App">
-      <Nav/>
-      <Switch>
-      <Route path="/home" exact component={Home} />
-      <Route path="/about"  component={About} />
-      </Switch>
-    </div>
+        <Nav/>
+          <Switch>
+            <Route path="/home" exact component={Home} />
+            <Route path="/about"  component={About} />
+          </Switch>
+     </div>
    </Router>
   );
 }
-
-
-
-
 
 export default App;

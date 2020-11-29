@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 interface IPag{
 
-  postsPerPage: any;
+  postsPerPage: number;
   totalPosts: number;
   paginate: any;
 }
