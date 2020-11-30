@@ -1,7 +1,8 @@
 # Getting Started with Create React App
 
-npm install
-npm start
+-npm install
+
+-npm start
 
 ## Learn More
 
