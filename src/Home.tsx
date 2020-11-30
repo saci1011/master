@@ -7,12 +7,12 @@ import {Link} from 'react-router-dom';
 
 
 const App = () => {
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState([]);             //useState
     const [loading, setLoading] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [postsPerPage] = useState(10);                //only 10 Items pro Page
   
-    useEffect(() => {
+    useEffect(() => {                                   //useEffect
       const fetchPosts = async () => {
         setLoading(true);
         const res = await axios.get('https://jsonplaceholder.typicode.com/posts');
@@ -21,7 +21,7 @@ const App = () => {
       };
   
       fetchPosts();
-    }, []);
+    }, []);                                                 //curly Brackets     
   
     // Get current posts
     const indexOfLastPost = currentPage * postsPerPage;
@@ -34,9 +34,8 @@ const App = () => {
     return (
       <div className='container mt-5'>
           
-        <h1 className='text-primary mb-3'>JsonPlaceHolder</h1>
+        <h1 className='text-primary mb-3'>This are some JSON Placeholders</h1>
 
-         
         <Link to={`/Home/`}>
         <Posts posts={currentPosts} loading={loading} />
         </Link>

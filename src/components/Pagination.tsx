@@ -16,19 +16,15 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }: IPag ) => {
 
   return (
     <nav>
-      
-
-      
       <ul className='pagination'>
         {pageNumbers.map(number => (
           <li key={number} className='page-item'>
-            <a onClick={() => paginate(number)} href='home' className='page-link'>
+            <a onClick={() => paginate(number)} href='/home/' className='page-link'>
               {number}
             </a>
           </li>
         ))}
-      </ul>
-      
+      </ul>   
     </nav>
   );
 };
